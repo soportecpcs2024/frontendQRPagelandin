@@ -1,4 +1,3 @@
-// src/components/MessagePage.js
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
@@ -10,7 +9,7 @@ const MessagePage = () => {
   useEffect(() => {
     const fetchMessage = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/message/${id}`);
+        const response = await axios.get(`https://backendqr-ns9q.onrender.com/message/${id}`);
         setMessage(response.data.message);
       } catch (error) {
         setMessage('Error al cargar el mensaje');
